@@ -1,0 +1,56 @@
+{
+    "name": "nodeloc/flarum-ext-leaderboard",
+    "description": "The permission based public leaderboard extension for your Flarum forum.",
+    "keywords": [
+        "extension",
+        "flarum",
+        "leader boarrd"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "support": {
+        "forum": "https://www.nodeloc.com"
+    },
+    "homepage": "https://www.nodeloc.com",
+    "authors": [
+        {
+            "name": "James",
+            "email": "james@nodeloc.com",
+            "homepage": "https://www.nodeloc.com/"
+        }
+    ],
+    "require": {
+        "flarum/core": "^1.8.5",
+        "ext-json": "*"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Nodeloc Leaderboard",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-sort-amount-up",
+                "backgroundColor": "#e74c3c",
+                "color": "#fff"
+            },
+            "optional-dependencies": [
+                "flarum/suspend"
+            ]
+        },
+        "flarum-cli": {
+            "modules": {
+                "githubActions": true,
+                "backendTesting": true
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Nodeloc\\LeaderBoard\\": "src/"
+        }
+    },
+    "require-dev": {
+        "flarum/testing": "^1.0.0",
+        "flarum/phpstan": "*",
+        "flarum/suspend": "*"
+    }
+}
